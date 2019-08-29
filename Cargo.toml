@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+  "experiments",
+  "functions",
+  "guessing_game",
+  "variables"
+]
