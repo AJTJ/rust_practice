@@ -4,5 +4,6 @@ members = [
   "experiments",
   "functions",
   "guessing_game",
-  "variables"
+  "variables",
+  "control_flow"
 ]
