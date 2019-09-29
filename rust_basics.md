@@ -1,7 +1,6 @@
 STATUS
 
-- Chapter 3 "Data types"
-  https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
+- Check Ownership notes
 
 # some cargo **commands**
 

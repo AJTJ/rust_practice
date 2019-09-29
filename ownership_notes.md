@@ -1,3 +1,7 @@
+Status
+
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+
 # Stack
 
 - literallly a stack of data that is easy for the CPU to push and pop, since it is all in a stack. Data on the stack _must_ have a known, fixed size.
@@ -23,3 +27,8 @@
 - **Deep copying** actually copies the heap data as well.
 - Anything only stored on the _stack_ (anything with known, fixed value at compile time) has no heap data, therefore will never need to have its memory allocation managed.
 - _To be seen_ the `Copy` trait is part of certain data types and will _not_ cause older variables to go out of scope.
+- functions take ownership as well, unless they have the `Copy` trait.
+
+# References
+
+...
