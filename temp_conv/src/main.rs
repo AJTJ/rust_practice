@@ -3,7 +3,7 @@ fn main() {
     println!("122 F in C is {}", celc_far(122, true));
 
     let fib_num = 20;
-    println!("{} fib number is {}", fib_num, gen_fib(20));
+    println!("{} fib number is {}", fib_num, gen_fib_sequence(20));
 }
 
 fn celc_far(temp: i32, is_f: bool) -> i32 {
@@ -15,14 +15,14 @@ fn celc_far(temp: i32, is_f: bool) -> i32 {
     }
 }
 
-fn gen_fib(target: i32) -> i32 {
-    let mut first_number = 0;
-    let mut second_number = 1;
+fn gen_fib_sequence(target: i32) -> i32 {
+    let mut x = 0;
+    let mut y = 1;
     for _ in 0..target - 2 {
-        let outcome = first_number + second_number;
-        first_number = second_number;
-        second_number = outcome;
+        let outcome = x + y;
+        x = y;
+        y = outcome;
     }
 
-    return second_number;
+    return y;
 }
