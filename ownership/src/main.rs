@@ -3,6 +3,14 @@ fn main() {
     s1.push_str(", world!!");
     println!("s1: {}", s1);
 
+    let mut another_s = "Here we go!";
+
+    println!("the other {}", another_s);
+
+    another_s = "brood";
+
+    println!("the other {}", another_s);
+
     // s2 is a copy of s1, BUT it uses the heap data that the pointer of s1 points to.
     let s2 = s1;
     println!("moving s2 to s2: {}", s2);
@@ -16,15 +24,18 @@ fn main() {
 
     println!("s3, a full copy: {}", s3);
 
+    // integers are COPY, therefore they do not get ownership taken away from them.
     let n1 = 1;
     let mut n2 = n1;
     n2 = n2 + 1;
+    // n1 still exists
     println!("n1 {}", n1);
     println!("n2 {}", n2);
 
     println!("return num {}", return_num(n2));
     println!("n2 still avail {}", n2);
 
+    //the following function takes the s3 value
     return_str(s3);
     // the following is an error since s3's value was moved
     // by the function call.

@@ -7,5 +7,7 @@ members = [
   "variables",
   "control_flow",
   "temp_conv",
-  "ownership"
+  "ownership",
+  "ref_borrowing",
+  "slice_type"
 ]
