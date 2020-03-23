@@ -6,11 +6,13 @@ fn main() {
 fn first_word(s: &String) -> usize {
     let bytes = s.as_bytes();
 
+    // looping through a tuple created by enumerate
     for (i, &item) in bytes.iter().enumerate() {
+        // searching for space with byte literal
         if item == b' ' {
             return i;
         }
     }
-
+    // if we don't return the i above, we return the length
     s.len()
 }

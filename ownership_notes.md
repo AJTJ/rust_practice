@@ -70,7 +70,21 @@ https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#dangling-re
 
 ### The Slice Type
 
-- Does not have ownership
+- Is a type of reference
+  - Does not have ownership
+
+In our problem we use the `.iter()` method
+
+- returns each element in a collection
+
+- `enumerate`
+  - wraps the result of `iter` and returns each element as part of a tuple instead.
+  - the first element of this tuple is the index.
+
+Basically in `slice_type` the `iter().enumerate()` calculates the index for us.
+
+- `b''`
+- represents the syntax for byle literal
 
 ## Notes
 
