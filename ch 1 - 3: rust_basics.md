@@ -1,6 +1,3 @@
-STATUS
-
-- Check Ownership notes
 
 # some cargo **commands**
 
@@ -161,6 +158,12 @@ while ii < 8 {
 ```
 for num in (1..4).rev() {
     println!("{}!", num)
+}
+```
+- or when used with .iter().enumerate()
+```
+for (i, value) in expression.iter().enumerate() {
+
 }
 ```
 

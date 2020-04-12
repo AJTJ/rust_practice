@@ -1,6 +1,7 @@
-Status
 
-https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#dangling-references
+# files
+`ref_borrowing`
+`slice_type`
 
 # Stack
 
@@ -65,30 +66,44 @@ https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#dangling-re
 
 - Restrictions
   - You can only have one mutable reference to a piece of data _in the same scope._
-    - Restiction exists so as to have _very_ controlled mutation.
+  - Restiction exists so as to have _very_ controlled mutation.
   - You cannot have a mutable ref if an immutable ref already exists.
 
-### The Slice Type
+### Dangling References
 
+```
+fn dangle() -> String {
+    let s = String::from("hello");
+    &s
+}
+```
+- In the above example, we are trying to return a reference to `s`, but it will have gone out of scope and it is dropped.
+- Just returning `s` directly solves this, since it moves ownership out of the function.
+
+### The Slice Type
+```
+let slice = &var[1..5];
+```
 - Is a type of reference
   - Does not have ownership
-
-In our problem we use the `.iter()` method
-
-- returns each element in a collection
-
-- `enumerate`
-  - wraps the result of `iter` and returns each element as part of a tuple instead.
-  - the first element of this tuple is the index.
-
-Basically in `slice_type` the `iter().enumerate()` calculates the index for us.
-
-- `b''`
-- represents the syntax for byle literal
 
 ## Notes
 
 - References are `immutable` by default.
-- At any given time, you can have either one mutable reference or any number of immutable references.\*\*\*\*
-- References must always be valid.
-  - no `dangling ref`
+- References must always be valid, i.e. no `dangling ref`
+### The `.iter()` method
+- returns each element in a collection
+
+### The `enumerate` method
+  - wraps the result of `iter` and returns each element as part of a tuple instead.
+  - the first element of this tuple is the index.
+
+Basically in `slice_type` the `iter().enumerate()` calculates the index for us...
+```
+for (i, value) in foo.iter().enumerate() {
+
+}
+```
+### byte literal syntax
+`b''`
+- represents the syntax for searching for a byle literal and NOT the string variant.
