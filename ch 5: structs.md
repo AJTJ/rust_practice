@@ -1,15 +1,25 @@
 # Status
-https://doc.rust-lang.org/book/ch05-01-defining-structs.html#defining-and-instantiating-structs
+https://doc.rust-lang.org/book/ch05-03-method-syntax.html#method-syntax
 
 # Files
 `structs`
+`rectangle`
 
 # Struct facts
 - The field of a struct can be different types.
 - Each field is named.
 - Each field has key: value pairs
 
-# Tuple Structs
+### Struct Declaration
+```
+struct Thing {
+  key: dataType,
+  key: dataType,
+  ...
+}
+```
+
+## Tuple Structs
 ```
 struct Color(i32, i32, i32);
 let black = Color(0, 0, 0);
