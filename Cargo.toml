@@ -9,5 +9,7 @@ members = [
   "temp_conv",
   "ownership",
   "ref_borrowing",
-  "slice_type"
+  "slice_type",
+  "structs",
+  "rectangle",
 ]
