@@ -11,5 +11,7 @@ members = [
   "ref_borrowing",
   "slice_type",
   "structs",
-  "rectangle",
+  "rectangle_function",
+  "rectangle_methods",
+  "enums"
 ]
