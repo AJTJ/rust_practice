@@ -13,5 +13,6 @@ members = [
   "structs",
   "rectangle_function",
   "rectangle_methods",
-  "enums"
+  "enums",
+  "pattern_matching"
 ]

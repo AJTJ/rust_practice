@@ -23,6 +23,12 @@ let black = Color(0, 0, 0);
 ```
 - behave exactly like tuples except that each struct is inherently its own `type`, and cannot take another tuple struct as an argument.
 
+## Unit Struct
+- simply an empty struct
+```
+struct StructName;
+```
+
 ## Methods
 
 `impl`
@@ -31,9 +37,9 @@ let black = Color(0, 0, 0);
 `self`
 - Self is *ALWAYS* the first param in an `impl` block.
 
-- Methods can take ownership of `self`, borrow `&self` immutably, or borrow `&mut self` mutably, just as they can any other parameter. The first case (just taking ownership of `self` is rare).
+- Methods can take ownership of `self`, borrow `&self` immutably, or borrow `&mut self` mutably, just as they can any other parameter. The first case (just taking ownership of `self` is rare, and would be used to change the identity of the struct).
 
-- Methods allow cleaner organization.
+- One of the purposes of Methods on structs (rather than floating functions) is that it groups all associated methods together.
 
 ## Associated Functions
 - this is created when a method does NOT call `self`
