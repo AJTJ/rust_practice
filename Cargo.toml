@@ -14,5 +14,8 @@ members = [
   "rectangle_function",
   "rectangle_methods",
   "enums",
-  "pattern_matching"
+  "pattern_matching",
+  "packages_crates",
+  "modules",
+  "restaurant"
 ]

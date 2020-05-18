@@ -1,4 +1,3 @@
-https://doc.rust-lang.org/book/ch06-02-match.html
 
 ## Enums
 - Enums allow you to define a type by enumerating its possible variants.
@@ -24,5 +23,28 @@ let thing = ENUMTITLE::e3(5, 5, String::from("apples"), 75);
 enum Option<T> {
     Some(T),
     None,
+}
+```
+
+## Pattern matching
+- `match` is the primary tool
+- `if let` is the sytactic sugar
+```
+match x {
+  1 => output,
+  2 => {
+    output inside braces
+  },
+  3 => output,
+  _ => ()
+}
+```
+
+```
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
 }
 ```

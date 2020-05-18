@@ -38,7 +38,15 @@ name = "methods"
 version = "0.1.0"
 
 [[package]]
+name = "modules"
+version = "0.1.0"
+
+[[package]]
 name = "ownership"
+version = "0.1.0"
+
+[[package]]
+name = "packages_crates"
 version = "0.1.0"
 
 [[package]]
@@ -93,6 +101,10 @@ version = "0.1.0"
 
 [[package]]
 name = "ref_borrowing"
+version = "0.1.0"
+
+[[package]]
+name = "restaurant"
 version = "0.1.0"
 
 [[package]]
