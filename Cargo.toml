@@ -17,5 +17,6 @@ members = [
   "pattern_matching",
   "packages_crates",
   "modules",
-  "restaurant"
+  "restaurant",
+  "vectors"
 ]
