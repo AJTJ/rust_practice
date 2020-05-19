@@ -6,26 +6,12 @@ mod tests {
     }
 }
 
-// a module containing other modules for a restaurant style system.
-// crate -> front_of_house -> hosting etc..
-// front_of_house isn't private, but is accessible from eat_at_restaurant since they are siblings.
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}
-
 fn serve_order() {}
+
+// using a semi-colon after front_of_house;, instead of front_of_house {} tells Rust to load the contents of the module from another file with the same name as the module.
+mod front_of_house;
+
+pub use crate::front_of_house::hosting;
 
 // An example of using `super` to access the root dir of the parent module
 mod back_of_house {
@@ -58,6 +44,10 @@ mod back_of_house {
     }
 }
 
+//bringing a module into scope
+// also re-exporting it
+// pub use crate::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
     //Absolute path
     // the crate keyword works here since `add_to_waitlist` is defined in the same crate
@@ -78,4 +68,7 @@ pub fn eat_at_restaurant() {
     // an example of using ALL public variants of an enum.
     let order1 = back_of_house::Appetizer::Soup;
     let order2 = back_of_house::Appetizer::Salad;
+
+    // hosting was brought into scope with `use`
+    hosting::add_to_waitlist();
 }
