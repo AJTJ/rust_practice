@@ -25,6 +25,7 @@ fn main() {
         None => println!("The third ain't nuffin"),
     };
 
+    // MACRO for a vector
     let mut v = vec![1, 2, 3, 4, 5];
 
     //borrows v as immutable
@@ -37,6 +38,36 @@ fn main() {
 
     // EXPLAINS REFERENCE RULES
     /*
-    The code in Listing 8-7 might look like it should work: why should a reference to the first element care about what changes at the end of the vector? This error is due to the way vectors work: adding a new element onto the end of the vector might require allocating new memory and copying the old elements to the new space, if there isn’t enough room to put all the elements next to each other where the vector currently is. In that case, the reference to the first element would be pointing to deallocated memory. The borrowing rules prevent programs from ending up in that situation.
+    The code ABOVE might look like it should work: why should a reference to the first element care about what changes at the end of the vector? This error is due to the way vectors work: adding a new element onto the end of the vector might require allocating new memory and copying the old elements to the new space, if there isn’t enough room to put all the elements next to each other where the vector currently is. In that case, the reference to the first element would be pointing to deallocated memory. The borrowing rules prevent programs from ending up in that situation.
     */
+
+    let veccy = vec![22, 44, 55];
+
+    //iterating over IMMUTABLE REFERENCES of a vector
+    for i in &veccy {
+        println!("the ele is {}", i);
+    }
+
+    let mut veccy2 = vec![22, 44, 55];
+    //iterating over MUTABLE REFERENCES of a vector
+    //The * operator dereferences
+    for i in &mut veccy2 {
+        *i += 50;
+        println!("the ele is {:#?}", i);
+    }
+
+    #[derive(Debug)]
+    enum InputValue {
+        Int(i32),
+        Text(String),
+        Float(f64),
+    };
+
+    let char_input = vec![
+        InputValue::Float(33.33),
+        InputValue::Text(String::from("Some text")),
+        InputValue::Int(66),
+    ];
+
+    println!("The first value is {:?}", char_input[0]);
 } // v1 and v2 would go out of scope here

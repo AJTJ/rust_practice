@@ -18,5 +18,6 @@ members = [
   "packages_crates",
   "modules",
   "restaurant",
-  "vectors"
+  "vectors",
+  "strings"
 ]
