@@ -1,6 +1,6 @@
 fn main() {
     let mut v1: Vec<i32> = Vec::new();
-    let mut v2 = vec![1, 2, 3];
+    let v2 = vec![1, 2, 3];
 
     v1.push(1);
     v1.push(4);
@@ -26,7 +26,7 @@ fn main() {
     };
 
     // MACRO for a vector
-    let mut v = vec![1, 2, 3, 4, 5];
+    let v = vec![1, 2, 3, 4, 5];
 
     //borrows v as immutable
     let first = &v[0];
@@ -53,9 +53,10 @@ fn main() {
     //The * operator dereferences
     for i in &mut veccy2 {
         *i += 50;
-        println!("the ele is {:#?}", i);
+        println!("the ele in veccy2 is {:#?}", i);
     }
 
+    // Using an Enum to Store Multiple Types
     #[derive(Debug)]
     enum InputValue {
         Int(i32),
@@ -69,5 +70,8 @@ fn main() {
         InputValue::Int(66),
     ];
 
-    println!("The first value is {:?}", char_input[0]);
+    println!(
+        "The first value in the char_input vec is {:?}",
+        char_input[0]
+    );
 } // v1 and v2 would go out of scope here

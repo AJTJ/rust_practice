@@ -19,5 +19,6 @@ members = [
   "modules",
   "restaurant",
   "vectors",
-  "strings"
+  "strings",
+  "hash_map"
 ]

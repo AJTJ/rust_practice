@@ -46,9 +46,29 @@ let char_input = vec![
 ];
 ```
 
+## Traits (looking ahead)
+- If you don't know the exhaustive set of types the program will get at runtime in a vector, the enum technique won't work. You would need to use a `trait` object.
+
+# 8.2
+
 ## The `String` and `str` types
 - `str` is the string slice, usually seen in its borrowed form `&str`.
 - the `String` type is a growable, mutable, owned, UTF-8 encoded string type.
 - There is also `OsString`, `OsStr`, `CString` and `CStr`
 
-SEE the `strings` file for all sorts of tools and methods.
+## **SEE the `strings` file for all sorts of tools and methods.**
+
+## some string notes
+```
+Indexing into a string is often a bad idea because it’s not clear what the return type of the string-indexing operation should be: a byte value, a character, a grapheme cluster, or a string slice. 
+```
+
+# 8.3
+
+## Hash Maps
+
+- functions very similarly to a JS object.
+- it stores a collection of `key` `value` pairs.
+- data is stored on the HEAP.
+- ALL `keys` must have the same type.
+- ALL `values` must have the same type.

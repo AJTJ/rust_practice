@@ -25,4 +25,34 @@ fn main() {
     // CONCATENATION with the +
     // both d and e have been moved here and cannot be used again
     println!("d + e: {}", d + e);
+
+    let x = String::from("tic");
+    let y = String::from("tac");
+    let z = String::from("toe");
+
+    //Using the FORMAT! macro
+    // does NOT take ownership
+    let full_tic = format!("{}-{}-{}", x, y, z);
+
+    println!("the full tic: {}", full_tic);
+    println!("just a tic: {}", x);
+
+    //Indexing into Strings
+    let h = String::from("abcdefg");
+
+    //The following will NOT work, since each unicode scalar value will take different amounts of memory (bytes) depending on the character.
+    // indexing a string is not allowed
+    // println!("1st index of h: {}", h[0])
+
+    // the way to grab chars
+    for i in h.chars() {
+        println!("another char in h: {}", i)
+    }
+
+    // the way to grab bytes
+    for i in h.bytes() {
+        println!("another byte in h: {}", i)
+    }
+
+    //Grapheme clusters from strings is another thing, but is not in the stlib.
 }
