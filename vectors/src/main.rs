@@ -1,7 +1,10 @@
 fn main() {
+    // the VECTOR
     let mut v1: Vec<i32> = Vec::new();
+    //SHORTHAND
     let v2 = vec![1, 2, 3];
 
+    // PUSHING
     v1.push(1);
     v1.push(4);
     v1.push(7);
@@ -10,7 +13,7 @@ fn main() {
     println!("v1 = {:?}", v1);
     println!("v2 = {:?}", v2);
 
-    // the code will panic and crash using the bracket notation if the index is empty.
+    // the code will panic and crash using the bracket notation if the index referenced is empty.
     let third: &i32 = &v1[2];
     println!("v1's third type: {}", third);
     println!("v1 = {:?}", v1);
@@ -19,7 +22,7 @@ fn main() {
     println!("v1's third type, again: {}", also_third);
     println!("v1 = {:?}", v1);
 
-    //
+    // using match to CHECK
     match v1.get(2) {
         Some(third) => println!("The third ele is {}", third),
         None => println!("The third ain't nuffin"),

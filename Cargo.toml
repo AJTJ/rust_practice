@@ -20,5 +20,6 @@ members = [
   "restaurant",
   "vectors",
   "strings",
-  "hash_map"
+  "hash_map",
+  "collections_exercises"
 ]

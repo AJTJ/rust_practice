@@ -1,4 +1,4 @@
-https://doc.rust-lang.org/book/ch08-01-vectors.html#iterating-over-the-values-in-a-vector
+https://doc.rust-lang.org/book/ch08-03-hash-maps.html#summary
 
 ## Vectors
 - allow you to store more than one value in a data structure that puts all the values next to each other in memory.
