@@ -5,6 +5,14 @@ name = "ch8_exercises"
 version = "0.1.0"
 
 [[package]]
+name = "collections_exercises_2"
+version = "0.1.0"
+
+[[package]]
+name = "collections_exercises_3"
+version = "0.1.0"
+
+[[package]]
 name = "control_flow"
 version = "0.1.0"
 
