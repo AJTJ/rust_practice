@@ -66,6 +66,10 @@ name = "packages_crates"
 version = "0.1.0"
 
 [[package]]
+name = "panic"
+version = "0.1.0"
+
+[[package]]
 name = "pattern_matching"
 version = "0.1.0"
 

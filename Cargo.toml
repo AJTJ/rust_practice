@@ -23,5 +23,6 @@ members = [
   "hash_map",
   "collections_exercises_1",
   "collections_exercises_2",
-  "collections_exercises_3"
+  "collections_exercises_3",
+  "panic_result"
 ]

@@ -28,7 +28,7 @@ fn main() {
         data.split_whitespace().map(|x| alter_word(&x)).collect()
     }
 
-    let data = String::from("The big hairy dog walked in a circle");
+    let data = String::from("The big hairy dog named Rusty walked in a circle");
 
     println!(
         "
