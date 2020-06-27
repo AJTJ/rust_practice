@@ -1,4 +1,6 @@
 
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#propagating-errors
+
 # `panic!`
 - for unrecoverable errors
 - `RUST_BACKTRACE=1 cargo run`
