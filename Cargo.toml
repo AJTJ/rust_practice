@@ -25,5 +25,6 @@ members = [
   "collections_exercises_2",
   "collections_exercises_3",
   "panic_result",
-  "propagating_errors"
+  "propagating_errors",
+  "more_errors"
 ]
