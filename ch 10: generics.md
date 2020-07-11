@@ -1,4 +1,4 @@
-https://doc.rust-lang.org/book/ch10-00-generics.html
+https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters
 
 # Generics
 
