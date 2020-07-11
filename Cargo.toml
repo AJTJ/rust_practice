@@ -4,6 +4,7 @@ members = [
   "experiments",
   "functions",
   "guessing_game",
+  'gg_2',
   "variables",
   "control_flow",
   "temp_conv",
@@ -26,5 +27,8 @@ members = [
   "collections_exercises_3",
   "panic_result",
   "propagating_errors",
-  "more_errors"
+  "more_errors",
+  "generic_basics",
+  "generics",
+  "traits"
 ]

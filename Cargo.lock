@@ -34,6 +34,21 @@ name = "functions"
 version = "0.1.0"
 
 [[package]]
+name = "generic_basics"
+version = "0.1.0"
+
+[[package]]
+name = "generics"
+version = "0.1.0"
+
+[[package]]
+name = "gg_2"
+version = "0.1.0"
+dependencies = [
+ "rand 0.3.23 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "guessing_game"
 version = "0.1.0"
 dependencies = [
@@ -149,6 +164,10 @@ version = "0.1.0"
 
 [[package]]
 name = "temp_conv"
+version = "0.1.0"
+
+[[package]]
+name = "traits"
 version = "0.1.0"
 
 [[package]]

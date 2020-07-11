@@ -1,4 +1,3 @@
-
 # some cargo **commands**
 
 `cargo new FILE_NAME` = start new cargo
@@ -160,7 +159,9 @@ for num in (1..4).rev() {
     println!("{}!", num)
 }
 ```
+
 - or when used with .iter().enumerate()
+
 ```
 for (i, value) in expression.iter().enumerate() {
 
