@@ -9,3 +9,9 @@ check the `generics` file
 # Traits
 
 - Like `interfaces` in other languages.
+
+## coherance
+- We cannot implement **external** traits on **external** types.
+  - This is known as the `orphan rune`
+    - One or the other MUST be local to our crate.
+    - This ensures other people's code cannot break our code and vice versa.
