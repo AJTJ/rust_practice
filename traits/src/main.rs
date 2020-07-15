@@ -1,3 +1,4 @@
+use std::fmt::Display;
 use traits::notify;
 use traits::notify2;
 use traits::notify_and_add_word;
@@ -34,6 +35,31 @@ fn main() {
       content: String::from("of course, as you probably already know, people"),
       reply: false,
       retweet: false,
+    }
+  }
+
+  //Another example of implementing methods for types that implement specific traits
+
+  struct Pair<T> {
+    x: T,
+    y: T,
+  }
+
+  // Pair ALWAYS implements the new function
+  impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+      Self { x, y }
+    }
+  }
+
+  // Here it demonstrates that Pair only implements the cmp_display function if the generic type implements the PartialOrd AND Display traits.
+  impl<T: Display + PartialOrd> Pair<T> {
+    fn cmp_display(&self) {
+      if self.x >= self.y {
+        println!("The largest member is x = {}", self.x);
+      } else {
+        println!("The largest member is y = {}", self.y);
+      }
     }
   }
 

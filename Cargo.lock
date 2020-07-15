@@ -65,6 +65,10 @@ version = "0.2.62"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "lifetimes"
+version = "0.1.0"
+
+[[package]]
 name = "methods"
 version = "0.1.0"
 
