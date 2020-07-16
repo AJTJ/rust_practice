@@ -1,6 +1,7 @@
 # some cargo **commands**
 
 `cargo new FILE_NAME` = start new cargo
+`cargo new FILE_NAME --lib` = start new cargo library
 `cargo check` = check your code
 `cargo build` = produces an executable
 \*\* `cargo run` = cargo build + run the executable

@@ -31,5 +31,6 @@ members = [
   "generic_basics",
   "generics",
   "traits",
-  "lifetimes"
+  "lifetimes",
+  "tests_adder"
 ]
