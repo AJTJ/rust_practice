@@ -8,6 +8,7 @@
 `cargo build --release` = compile with optimizations
 `cargo run --release` = cargo build --release + run
 `cargo doc --open` = build documentation in the browser
+`cargo test` = run all tests in crate
 
 # statements
 
