@@ -1,3 +1,17 @@
+fn prints_and_returns_10(a: i32) -> i32 {
+    println!("I got the value {}", a);
+    10
+}
+
+pub fn add_two(a: i32) -> i32 {
+    internal_adder(a, 2)
+}
+
+// private function
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
+}
+
 #[cfg(test)]
 mod tests {
     // using "super" and the "*"
@@ -5,6 +19,8 @@ mod tests {
     // "*" is a glob to grab everything
     use super::*;
     #[test]
+    // this test will NOT be run
+    #[ignore]
     fn exploration() {
         assert_eq!(2 + 2, 4);
     }
@@ -54,16 +70,15 @@ mod tests {
     }
 
     #[test]
-    fn greeting_contains_name() {
-        let result = greeting("Carol");
-        // Second argument here is for a custom error msg
-        assert!(
-            result.contains("Carol"),
-            "Greeting did not contain name, value was `{}`",
-            result
-        );
-    }
-
+    // fn greeting_contains_name() {
+    //     let result = greeting("Carol");
+    //     // Second argument here is for a custom error msg
+    //     assert!(
+    //         result.contains("Carol"),
+    //         "Greeting did not contain name, value was `{}`",
+    //         result
+    //     );
+    // }
     #[test]
     // should_panic ensures the test passes if it panics
     // the expected substring is used to make the should_panic more useful, since it now expects a specific substring on panic
@@ -71,6 +86,19 @@ mod tests {
     fn greater_than_100() {
         Guess::new(200);
     }
+
+    // generall we will NOT see the output of a passing test
+    #[test]
+    fn this_test_will_pass() {
+        let value = prints_and_returns_10(4);
+        assert_eq!(10, value);
+    }
+
+    // #[test]
+    // fn this_test_will_fail() {
+    //     let value = prints_and_returns_10(8);
+    //     assert_eq!(5, value);
+    // }
 }
 
 pub struct Guess {

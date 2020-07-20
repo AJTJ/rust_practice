@@ -9,6 +9,8 @@
 `cargo run --release` = cargo build --release + run
 `cargo doc --open` = build documentation in the browser
 `cargo test` = run all tests in crate
+`cargo test --help` = display options to be used with cargo test
+`cargo test -- --help` = display optiosn after the `--` separator
 
 # statements
 
