@@ -3,13 +3,11 @@ use std::io;
 // use rand::Rng;
 
 fn main() {
+  let _my_phrase = "apple";
 
-    let _my_phrase = "apple";
+  let mut guess = String::new();
 
-    let mut guess = String::new();
-    
-    io::stdin().read_line(&mut guess)
-      .expect("Failed to read line");
-
-    
+  io::stdin()
+    .read_line(&mut guess)
+    .expect("Failed to read line");
 }
