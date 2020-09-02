@@ -1,5 +1,6 @@
 file:///Users/aaronjanke/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch12-04-testing-the-librarys-functionality.html
 
+NOTE: check `minigrep` cargo
 
 # General process for splitting based on separation of concerns
 

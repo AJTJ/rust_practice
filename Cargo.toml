@@ -33,5 +33,6 @@ members = [
   "traits",
   "lifetimes",
   "adder",
-  "minigrep"
+  "minigrep",
+  "workout_app"
 ]
