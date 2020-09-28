@@ -8,9 +8,19 @@
 `cargo build --release` = compile with optimizations
 `cargo run --release` = cargo build --release + run
 `cargo doc --open` = build documentation in the browser
+
+### testing
+
 `cargo test` = run all tests in crate
 `cargo test --help` = display options to be used with cargo test
 `cargo test -- --help` = display optiosn after the `--` separator
+
+# other commands
+
+- how to update rust
+  `rustup update`
+- read the rust book
+  `rustup docs --book`
 
 # statements
 
