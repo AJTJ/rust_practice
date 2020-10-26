@@ -3,7 +3,7 @@
 `rectangle`
 
 # Struct facts
-- The field of a struct can be different types.
+- The fields of a struct can be different types.
 - Each field is named.
 - Each field has key: value pairs
 

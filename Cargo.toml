@@ -34,5 +34,9 @@ members = [
   "lifetimes",
   "adder",
   "minigrep",
-  "workout_app"
+  "workout_app",
+  "closures_2",
+  "iterators",
+  "shoe_size",
+  "iterator_trait"
 ]
