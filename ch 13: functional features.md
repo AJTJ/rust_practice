@@ -1,5 +1,4 @@
-file:///Users/aaronjanke/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch13-01-closures.html
-file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch13-01-closures.html
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch13-03-improving-our-io-project.html#using-the-returned-iterator-directly
 
 currently building `Cacher`
 - memoization tool
@@ -59,3 +58,5 @@ let n = example_closure(5);
 
 ## Creating iterators
 - calling `iter`, `into_iter`, and `iter_mut` on a vector are all valuable ways.
+- a custom iterator can be created using the `Iterator` trait.
+  - see `iterator_trait` file
