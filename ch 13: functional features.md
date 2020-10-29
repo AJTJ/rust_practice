@@ -52,7 +52,7 @@ let n = example_closure(5);
 - Iterators are lazy, no effect until you call methods that consume the iterator
 - consuming an iter, such as with a `for` does *not* require it be `mut` since it takes ownership and makes it `mut` behind the scenes.
 
-## Next
+## `next` method
 - All iterators have the `next` method
 - calling `next` on an iter requires that the iter be `mut`
 
@@ -60,3 +60,4 @@ let n = example_closure(5);
 - calling `iter`, `into_iter`, and `iter_mut` on a vector are all valuable ways.
 - a custom iterator can be created using the `Iterator` trait.
   - see `iterator_trait` file
+  - see: `mini_grep` project
