@@ -103,6 +103,10 @@ name = "more_errors"
 version = "0.1.0"
 
 [[package]]
+name = "my_crate"
+version = "0.1.0"
+
+[[package]]
 name = "ownership"
 version = "0.1.0"
 

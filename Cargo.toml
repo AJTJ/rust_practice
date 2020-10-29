@@ -38,5 +38,13 @@ members = [
   "closures_2",
   "iterators",
   "shoe_size",
-  "iterator_trait"
+  "iterator_trait",
+  "my_crate"
 ]
+
+# default settings for optimization levels
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3

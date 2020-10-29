@@ -61,3 +61,6 @@ let n = example_closure(5);
 - a custom iterator can be created using the `Iterator` trait.
   - see `iterator_trait` file
   - see: `mini_grep` project
+
+# Loops vs iterators performance
+- `closures` and `iterators` are zero-cost abstractions
