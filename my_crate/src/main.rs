@@ -1,5 +1,5 @@
-use my_crate;
+use speed_server;
 
 fn main() {
-    println!("Add one to 4: {}", my_crate::add_one(4));
+    println!("Add one to 4: {}", speed_server::add_one(4));
 }
