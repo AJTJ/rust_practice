@@ -8,6 +8,7 @@
 `cargo build --release` = compile with optimizations
 `cargo run --release` = cargo build --release + run
 `cargo doc --open` = build documentation in the browser
+`cargo install cratename` = install and use a binary crate
 
 ### testing
 
@@ -16,14 +17,15 @@
 `cargo test -- --help` = display optiosn after the `--` separator
 
 ### publishing
-`cargo publish` = publish to crates.io
+
+`cargo publish` = publish to crates.io (this is permanent)
+`cargo yank --vers 1.0.1` = remove a version
+`cargo yank --vers 1.0.1 --undo` = undo removing a version
 
 # other commands
 
-- how to update rust
-  `rustup update`
-- read the rust book
-  `rustup docs --book`
+`rustup update` = how to update rust
+`rustup docs --book` = read the rust book
 
 # statements
 

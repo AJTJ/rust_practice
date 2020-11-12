@@ -4,6 +4,10 @@ files
 - `my_crate`
 - root `Cargo.toml`
 
+published crates
+- https://crates.io/crates/speed_server (aka `my_crate`)
+- 
+
 # level of optimization
 - see the root Cargo.toml for how to set profile optimizations.
 
