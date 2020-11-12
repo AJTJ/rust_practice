@@ -15,6 +15,9 @@
 `cargo test --help` = display options to be used with cargo test
 `cargo test -- --help` = display optiosn after the `--` separator
 
+### publishing
+`cargo publish` = publish to crates.io
+
 # other commands
 
 - how to update rust
