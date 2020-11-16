@@ -40,7 +40,8 @@ members = [
   "shoe_size",
   "iterator_trait",
   "my_crate",
-  "art"
+  "art",
+  "just_practice"
 ]
 
 # default settings for optimization levels
