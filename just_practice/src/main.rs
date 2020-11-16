@@ -62,8 +62,6 @@ fn main() {
     let id = lines.next().unwrap().parse().expect("Could not parse ID");
     println!("Got it, ID is: {}", id);
 
-    lines.for_each(|l| println!("a line: {}", l));
-
     let date = Local::now();
 
     let current_user = User { name, id, date };
