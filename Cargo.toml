@@ -41,7 +41,8 @@ members = [
   "iterator_trait",
   "my_crate",
   "art",
-  "just_practice"
+  "just_practice",
+  "box_practice"
 ]
 
 # default settings for optimization levels
