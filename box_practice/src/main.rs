@@ -43,9 +43,11 @@ fn main() {
         }
     }
 
+    // IMPORTING DEREF ABOVE
     // IMPLEMENTING A TRAIT REQUIRES PROVIDING IMPLEMENTATIONS FOR THE TRAIT'S REQUIRED METHODS
     // THE METHOD HERE IS: "deref"
     impl<T> Deref for MyBox<T> {
+        // THIS IS AN ASSOCIATED TYPE COVERED IN CH.19
         type Target = T;
 
         fn deref(&self) -> &T {
@@ -53,7 +55,25 @@ fn main() {
         }
     }
 
-    let new_thang = MyBox::new(32);
+    let c = 5;
+    let d = MyBox::new(x);
 
-    println!("new thang = {:?}", new_thang)
+    assert_eq!(5, c);
+    // DEREF WOULD NOT WORK HERE IF I HAD NOT IMPLEMENTED THE DEREF TRAIT
+    assert_eq!(5, *d);
+
+    // DEREF COERCION
+    // "DEREF" ON MYBOX IS COERCING &MyBox<String> INTO &String. STD HAS DEREF ON String AND IS RETURNING A STRING SLICE, AND THEN RUST AGAIN CALLING DEREF ON &STRING INTO &STR
+    let m = MyBox::new(String::from("Buddy"));
+    hello(&m);
+
+    // WITHOUT DEREF COERCION
+    let m2 = MyBox::new(String::from("Jon"));
+    // The *m dereferences the MyBox<String> into a String.
+    // THe & and [..] take a string slice of the String equal to the whole string to match the signature of hello.
+    hello(&(*m2)[..]);
+
+    fn hello(name: &str) {
+        println!("Hello {}!", name)
+    }
 }
