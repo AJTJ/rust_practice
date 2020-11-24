@@ -42,7 +42,11 @@ members = [
   "my_crate",
   "art",
   "just_practice",
-  "box_practice"
+  "box_practice",
+  "drop_trait",
+  "reference_counting",
+  "interior_mutability",
+  "rc_and_refcell"
 ]
 
 # default settings for optimization levels

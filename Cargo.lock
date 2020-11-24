@@ -52,6 +52,10 @@ name = "control_flow"
 version = "0.1.0"
 
 [[package]]
+name = "drop_trait"
+version = "0.1.0"
+
+[[package]]
 name = "enums"
 version = "0.1.0"
 
@@ -93,6 +97,10 @@ dependencies = [
 
 [[package]]
 name = "hash_map"
+version = "0.1.0"
+
+[[package]]
+name = "interior_mutability"
 version = "0.1.0"
 
 [[package]]
@@ -214,6 +222,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c33a3c44ca05fa6f1807d8e6743f3824e8509beca625669633be0acbdf509dc"
 
 [[package]]
+name = "rc_and_refcell"
+version = "0.1.0"
+
+[[package]]
 name = "rdrand"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -228,6 +240,10 @@ version = "0.1.0"
 
 [[package]]
 name = "ref_borrowing"
+version = "0.1.0"
+
+[[package]]
+name = "reference_counting"
 version = "0.1.0"
 
 [[package]]
