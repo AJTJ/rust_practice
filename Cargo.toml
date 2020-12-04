@@ -46,7 +46,10 @@ members = [
   "drop_trait",
   "reference_counting",
   "interior_mutability",
-  "rc_and_refcell"
+  "rc_and_refcell",
+  "reference_cycles",
+  "tree_data",
+  "spawn"
 ]
 
 # default settings for optimization levels
