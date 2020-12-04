@@ -1,4 +1,4 @@
-file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch16-00-concurrency.html
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch16-01-threads.html#using-move-closures-with-threads
 
 # threads and runtime
 - 1:1
