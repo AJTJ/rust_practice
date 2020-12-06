@@ -51,7 +51,10 @@ members = [
   "tree_data",
   "spawn",
   "spawn_values",
-  "message_passing"
+  "message_passing",
+  "mutex",
+  "multiple_mutex",
+  "deadlock"
 ]
 
 # default settings for optimization levels

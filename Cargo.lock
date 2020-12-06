@@ -52,6 +52,10 @@ name = "control_flow"
 version = "0.1.0"
 
 [[package]]
+name = "deadlock"
+version = "0.1.0"
+
+[[package]]
 name = "drop_trait"
 version = "0.1.0"
 
@@ -146,6 +150,14 @@ version = "0.1.0"
 
 [[package]]
 name = "more_errors"
+version = "0.1.0"
+
+[[package]]
+name = "multiple_mutex"
+version = "0.1.0"
+
+[[package]]
+name = "mutex"
 version = "0.1.0"
 
 [[package]]
