@@ -49,7 +49,9 @@ members = [
   "rc_and_refcell",
   "reference_cycles",
   "tree_data",
-  "spawn"
+  "spawn",
+  "spawn_values",
+  "message_passing"
 ]
 
 # default settings for optimization levels
