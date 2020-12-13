@@ -1,4 +1,4 @@
-file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch17-03-oo-design-patterns.html
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch17-03-oo-design-patterns.html#defining-post-and-creating-a-new-instance-in-the-draft-state
 
 ## files
 - `gui`
@@ -41,4 +41,5 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
   - The crux being that a value has internal state.
 
 ## `blog_post`
-- 
+
+

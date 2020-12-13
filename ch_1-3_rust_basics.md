@@ -27,6 +27,12 @@
 `rustup update` = how to update rust
 `rustup docs --book` = read the rust book
 
+# Friends
+- `shepmaster`
+  - Some advice I often give is to read the entire doc page for Option, Result, and Iterator and remember what kinds of functionality exist. You don't have to remember method names or which does what.
+  - error handling guy
+  - https://docs.rs/snafu/0.6.10/snafu/
+
 # statements
 
 `use`
