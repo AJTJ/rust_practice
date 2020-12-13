@@ -6,6 +6,7 @@ fn main() {
     println!("my box = {}", my_box);
 
     // BASIC USE OF CONS TO CREATE A RECURSIVE DATA STRUCTURE
+    // "CONS" is simply the name that the author chose to give the first element of the list. It is short for "construct"
     enum List {
         Cons(i32, Box<List>),
         Nil,

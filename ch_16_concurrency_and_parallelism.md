@@ -59,8 +59,15 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
   - `Mutex<T>` allows us to mutate the contents of `Arc<T>`
 - `Mutex<T>` can create **deadlocks**
 
-## TODO
+## deadlock
 - `deadlock`
   - when an operation needs to lock two resources and two threads have each acquired one of the locks, causing them to wait for each other forever.
 - Create a piece of software that creates a deadlock.
 - The docs for `Mutex<T>` and `MutexGuard` have useful information for avoiding a deadlock.
+
+## `Send` marker trait
+- indicates that the type implementing Send can be transferred between threads.
+- `Rc<T>` does not have it, since two clones could update the ref count at the same time.
+
+## `Sync`
+- this marker trait indicates that the type is safe to be referenced from multiple threads.

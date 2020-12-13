@@ -61,16 +61,16 @@ fn main() {
 
     // Using an Enum to Store Multiple Types
     #[derive(Debug)]
-    enum InputValue {
+    enum SpreadsheetCell {
         Int(i32),
         Text(String),
         Float(f64),
     };
 
     let char_input = vec![
-        InputValue::Float(33.33),
-        InputValue::Text(String::from("Some text")),
-        InputValue::Int(66),
+        SpreadsheetCell::Float(33.33),
+        SpreadsheetCell::Text(String::from("Some text")),
+        SpreadsheetCell::Int(66),
     ];
 
     println!(

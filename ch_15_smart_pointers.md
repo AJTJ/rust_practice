@@ -14,6 +14,7 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 
 ### Box
 - `Box<>` is a pointer that provides `indirection` by placing data on the `heap` rather than the `stack`.
+- "In computer programming, indirection (also called dereferencing) is the ability to reference something using a name, reference, or container instead of the value itself. The most common form of indirection is the act of manipulating a value through its memory address."
 
 ### Deref trait
 - see `box_practice`

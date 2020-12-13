@@ -54,7 +54,9 @@ members = [
   "message_passing",
   "mutex",
   "multiple_mutex",
-  "deadlock"
+  "deadlock",
+  "gui",
+  "blog"
 ]
 
 # default settings for optimization levels
