@@ -1,4 +1,4 @@
-file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch17-03-oo-design-patterns.html#defining-post-and-creating-a-new-instance-in-the-draft-state
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch17-03-oo-design-patterns.html#trade-offs-of-the-state-pattern
 
 ## files
 - `gui`
