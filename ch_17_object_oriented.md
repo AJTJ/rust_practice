@@ -2,7 +2,7 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 
 ## files
 - `gui`
-- `blog_post`
+- `blog`
 
 ## What makes OOP
 - `struct`s and `enum`s have `impl` blocks that create methods. Not called objects, but they provide the same functionality using the `pub` keyword.
@@ -41,5 +41,3 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
   - The crux being that a value has internal state.
 
 ## `blog_post`
-
-

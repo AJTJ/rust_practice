@@ -4,7 +4,13 @@ fn main() {
     let mut post = Post::new();
 
     post.add_text("Today, I ate french toast");
+    assert_eq!("Is Draft", post.content());
+
+    post.request_review();
     assert_eq!("", post.content());
+
+    post.reject();
+    assert_eq!("Is Draft", post.content());
 
     post.request_review();
     assert_eq!("", post.content());
