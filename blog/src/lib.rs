@@ -38,6 +38,10 @@ impl Post {
             self.state = Some(s.reject())
         }
     }
+
+    pub fn approvals(&mut self) -> i32 {
+        self.approvals
+    }
 }
 
 trait State {
@@ -49,6 +53,9 @@ trait State {
         ""
     }
     fn reject(self: Box<Self>) -> Box<dyn State>;
+    fn approvals(self: Box<Self>) -> i32 {
+        // self.approvals
+    }
 }
 
 struct PendingReview {}
