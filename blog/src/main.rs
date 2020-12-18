@@ -16,6 +16,7 @@ fn main() {
     assert_eq!("", post.content());
 
     post.approve();
+    post.approve();
     assert_eq!("Today, I ate french toast", post.content());
 }
 

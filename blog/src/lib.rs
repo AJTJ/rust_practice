@@ -5,7 +5,7 @@
 pub struct Post {
     state: Option<Box<dyn State>>,
     content: String,
-    approvals: i32,
+    approvals: u32,
 }
 
 impl Post {
@@ -27,9 +27,16 @@ impl Post {
             self.state = Some(s.request_review())
         }
     }
+    pub fn approvals(&mut self) -> u32 {
+        self.approvals
+    }
     pub fn approve(&mut self) {
-        if let Some(s) = self.state.take() {
-            self.state = Some(s.approve())
+        self.approvals = self.approvals + 1;
+        println!("post approved, number of approvals: {}", self.approvals());
+        if self.approvals() >= 2 {
+            if let Some(s) = self.state.take() {
+                self.state = Some(s.approve())
+            }
         }
     }
 
@@ -37,10 +44,6 @@ impl Post {
         if let Some(s) = self.state.take() {
             self.state = Some(s.reject())
         }
-    }
-
-    pub fn approvals(&mut self) -> i32 {
-        self.approvals
     }
 }
 
@@ -53,12 +56,10 @@ trait State {
         ""
     }
     fn reject(self: Box<Self>) -> Box<dyn State>;
-    fn approvals(self: Box<Self>) -> i32 {
-        // self.approvals
-    }
 }
 
 struct PendingReview {}
+
 impl State for PendingReview {
     fn request_review(self: Box<Self>) -> Box<dyn State> {
         self
@@ -66,6 +67,7 @@ impl State for PendingReview {
     fn reject(self: Box<Self>) -> Box<dyn State> {
         Box::new(Draft {})
     }
+
     fn approve(self: Box<Self>) -> Box<dyn State> {
         Box::new(Published {})
     }
