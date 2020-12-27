@@ -19,6 +19,10 @@ name = "blog"
 version = "0.1.0"
 
 [[package]]
+name = "blog_alternative"
+version = "0.1.0"
+
+[[package]]
 name = "box_practice"
 version = "0.1.0"
 
@@ -49,6 +53,10 @@ version = "0.1.0"
 
 [[package]]
 name = "collections_exercises_3"
+version = "0.1.0"
+
+[[package]]
+name = "conditional_expressions"
 version = "0.1.0"
 
 [[package]]

@@ -56,7 +56,9 @@ members = [
   "multiple_mutex",
   "deadlock",
   "gui",
-  "blog"
+  "blog",
+  "blog_alternative",
+  "conditional_expressions"
 ]
 
 # default settings for optimization levels
