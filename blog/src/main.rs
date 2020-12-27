@@ -9,6 +9,8 @@ fn main() {
     post.request_review();
     assert_eq!("", post.content());
 
+    post.add_text("Attempting to add more text here");
+
     post.reject();
     assert_eq!("Is Draft", post.content());
 

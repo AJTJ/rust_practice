@@ -17,8 +17,14 @@ impl Post {
         }
     }
     pub fn add_text(&mut self, text: &str) {
-        self.content.push_str(text);
+        let new_content = self
+            .state
+            .as_ref()
+            .unwrap()
+            .content_changed(&self.content, text);
+        self.content = new_content.clone();
     }
+
     pub fn content(&self) -> &str {
         self.state.as_ref().unwrap().content(self)
     }
@@ -56,6 +62,10 @@ trait State {
         ""
     }
     fn reject(self: Box<Self>) -> Box<dyn State>;
+    fn content_changed(&self, content: &str, _text: &str) -> String {
+        println!("can't change content if not Draft");
+        content.to_string()
+    }
 }
 
 struct PendingReview {}
@@ -83,6 +93,10 @@ impl State for Draft {
     }
     fn content<'a>(&self, _post: &'a Post) -> &'a str {
         "Is Draft"
+    }
+
+    fn content_changed(&self, _content: &str, text: &str) -> String {
+        text.to_string()
     }
 }
 
