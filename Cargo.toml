@@ -58,7 +58,8 @@ members = [
   "gui",
   "blog",
   "blog_alternative",
-  "conditional_expressions"
+  "conditional_expressions",
+  "pattern_syntax"
 ]
 
 # default settings for optimization levels

@@ -212,6 +212,10 @@ name = "pattern_matching"
 version = "0.1.0"
 
 [[package]]
+name = "pattern_syntax"
+version = "0.1.0"
+
+[[package]]
 name = "propagating_error"
 version = "0.1.0"
 
