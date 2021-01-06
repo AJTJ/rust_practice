@@ -2,6 +2,7 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 
 ## files
 - `conditonal_expressions`
+- `pattern_syntax`
 
 ## `conditional_expressions`
 - `if let Ok(age) = age`

@@ -59,7 +59,8 @@ members = [
   "blog",
   "blog_alternative",
   "conditional_expressions",
-  "pattern_syntax"
+  "pattern_syntax",
+  "unsafe_rust"
 ]
 
 # default settings for optimization levels
