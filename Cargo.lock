@@ -5,6 +5,10 @@ name = "adder"
 version = "0.1.0"
 
 [[package]]
+name = "advanced_traits"
+version = "0.1.0"
+
+[[package]]
 name = "art"
 version = "0.1.0"
 
