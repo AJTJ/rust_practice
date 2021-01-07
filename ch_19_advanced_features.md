@@ -16,4 +16,5 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
   - or other rust features
 
 ## `advanced_traits`
-- 
+- Associated Types
+- Default Generic Type Parameters & Operator Overloading
