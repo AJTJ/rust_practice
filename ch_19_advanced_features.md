@@ -1,8 +1,9 @@
-https://doc.rust-lang.org/book/ch19-04-advanced-types.html
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch19-04-advanced-types.html
 
 ## files
 `unsafe_rust`
 `advanced_traits`
+`advanced_types`
 
 ## `unsafe_rust`
 - Allows you to:
@@ -18,3 +19,6 @@ https://doc.rust-lang.org/book/ch19-04-advanced-types.html
 ## `advanced_traits`
 - Associated Types
 - Default Generic Type Parameters & Operator Overloading
+
+## `advanced_types`
+- 

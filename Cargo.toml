@@ -61,7 +61,8 @@ members = [
   "conditional_expressions",
   "pattern_syntax",
   "unsafe_rust",
-  "advanced_traits"
+  "advanced_traits",
+  "advanced_types"
 ]
 
 # default settings for optimization levels
