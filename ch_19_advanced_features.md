@@ -21,4 +21,6 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 - Default Generic Type Parameters & Operator Overloading
 
 ## `advanced_types`
-- 
+- the "newtype" pattern/idiom (using tuple struct)
+  - `struct Title(i64)`
+- using newtype to hide internal implementations
