@@ -4,6 +4,8 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 `unsafe_rust`
 `advanced_traits`
 `advanced_types`
+`advanced_functions_closures`
+`macros`
 
 ## `unsafe_rust`
 - Allows you to:
@@ -24,3 +26,21 @@ file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/
 - the "newtype" pattern/idiom (using tuple struct)
   - `struct Title(i64)`
 - using newtype to hide internal implementations
+- `Sized` trait
+
+## `advanced_functions_closures`
+
+## `macros`
+- used for metaprogramming
+  - i.e. writing code that writes code
+- declarative macros
+  - i.e. `macro_rules!`
+- Custom `#[derive]` macros
+- attribute-like macros
+- function-like macros
+- "metaprogramming"
+  - writing code that writes code
+
+## macros vs functions
+- function signatures must declare the number and type of the parameters in the function.
+- Macros can take a variable number of param.

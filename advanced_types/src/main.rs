@@ -83,9 +83,14 @@ fn main() {
         // let vals = [u8];
 
         println!("{}", s1);
+
+        //...this...
+        fn generic_1<T>(_t: T) {}
+        //...is the same as this...
+        fn generic_2<T: Sized>(_t: T) {}
+        // ...generally generics only work on types that have a known size at compile time
+        // but this can be relaxed like so:
+        // The type might not be Sized, so we need to use it behind some kind of pointer, in this case it is a reference: "&T"
+        fn relaxed_generic<T: ?Sized>(_t: &T) {}
     }
 }
-
-// pub trait SimplifiedWrite {
-//     fn write(&mut self, buf: &[u8]) -> Result<usize>;
-// }

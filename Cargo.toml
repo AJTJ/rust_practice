@@ -62,7 +62,11 @@ members = [
   "pattern_syntax",
   "unsafe_rust",
   "advanced_traits",
-  "advanced_types"
+  "advanced_types",
+  "advanced_functions_closures",
+  "macros",
+  "hello_macro",
+  "hello_macro_derive",
 ]
 
 # default settings for optimization levels
