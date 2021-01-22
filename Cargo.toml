@@ -67,6 +67,7 @@ members = [
   "macros",
   "hello_macro",
   "hello_macro_derive",
+  "web_server"
 ]
 
 # default settings for optimization levels
