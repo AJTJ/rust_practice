@@ -1,4 +1,4 @@
-file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch20-00-final-project-a-web-server.html
+file:///Users/ajtj/.rustup/toolchains/stable-x86_64-apple-darwin/share/doc/rust/html/book/ch20-01-single-threaded.html#validating-the-request-and-selectively-responding
 
 ## Notes
 - HTTP Protocol
