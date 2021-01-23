@@ -5,7 +5,7 @@
 # Struct facts
 - The fields of a struct can be different types.
 - Each field is named.
-- Each field has key: value pairs
+- Each field has "key: value" pairs
 
 ### Struct Declaration
 ```

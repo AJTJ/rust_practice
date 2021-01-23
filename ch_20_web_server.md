@@ -22,3 +22,6 @@ Upgrade-Insecure-Requests:
 ...
 ...
 ```
+
+## General Notes
+- Recall from the “Storing Closures Using Generic Parameters and the Fn Traits” section in Chapter 13 that we can take closures as parameters with three different traits: Fn, FnMut, and FnOnce.
