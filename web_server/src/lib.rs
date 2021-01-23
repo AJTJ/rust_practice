@@ -31,6 +31,8 @@ impl Worker {
                 }
                 Message::Terminate => {
                     println!("Worker {} was told to terminate", id);
+
+                    break;
                 }
             }
         });
