@@ -14,7 +14,8 @@
 
 `cargo test` = run all tests in crate
 `cargo test --help` = display options to be used with cargo test
-`cargo test -- --help` = display optiosn after the `--` separator
+`cargo test -- --help` = display options after the `--` separator
+`cargo t --lib -- --nocapture` = run tests in lib and `nocapture` shows stdout.
 
 ### publishing
 
