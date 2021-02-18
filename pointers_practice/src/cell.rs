@@ -7,7 +7,6 @@ pub struct Cell<T> {
 
 // implied by UnsafeCell
 // impl<T> !Sync for Cell<T> {}
-unsafe impl<T> Sync for Cell<T> {}
 
 impl<T> Cell<T> {
     pub fn new(value: T) -> Self {
@@ -17,6 +16,8 @@ impl<T> Cell<T> {
     }
 
     pub fn set(&self, value: T) {
+        // SAFETY: we know no-one is concurrently mutating self.value (Because !Sync)
+        // SAFETY: we know we're not invalidating any references, because we never give any out
         unsafe {
             *self.value.get() = value;
         }
@@ -26,37 +27,36 @@ impl<T> Cell<T> {
     where
         T: Copy,
     {
+        // SAFETY: we know no-one else is modifying this value, since only this thread can mutate
+        // (because !Sync), and it is executing this function instead.
         unsafe { *self.value.get() }
     }
-    // pub fn get(&self) -> &T {
-    //     unsafe { &*self.value.get() }
-    // }
 }
 
 #[cfg(test)]
 mod test {
-    use super::Cell;
-    use std::sync::Arc;
-    use std::thread;
+    // use super::Cell;
+    // use std::sync::Arc;
+    // use std::thread;
 
-    // does not work because we are trying to mutate the cell from two different threads
+    // does not work because Cell is NOT Sync
     #[test]
     fn bad() {
-        let x = Arc::new(Cell::new(42));
-        let x1 = Arc::clone(&x);
-        let x2 = Arc::clone(&x);
-        thread::spawn(move || x1.set(43));
-        thread::spawn(move || x2.set(44));
+        // let x = Arc::new(Cell::new(42));
+        // let x1 = Arc::clone(&x);
+        // let x2 = Arc::clone(&x);
+        // thread::spawn(move || x1.set(43));
+        // thread::spawn(move || x2.set(44));
     }
 
     #[test]
     fn bad2() {
-        let x = Cell::new(String::from("hello"));
+        // let x = Cell::new(String::from("hello"));
         // the "first" variable would normally NOT be valid because Cell will NEVER give out a reference, it only ever gives out a copy. Otherwise first becomes invalidated after we call set on the cell.
         // with Cell, it only ever returns a COPY
-        let first = x.get();
-        x.set(String::new());
-        x.set(String::from("world"));
-        eprintln!("{}", first);
+        // let first = x.get();
+        // x.set(String::new());
+        // x.set(String::from("world"));
+        // eprintln!("{}", first);
     }
 }
