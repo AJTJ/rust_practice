@@ -16,6 +16,7 @@
 
 // WHAT IT DOES NOT DO
 // Not thread-safe
+// therefore not safe to send to different threads (it is not Send)
 
 // WEAK VS STRONG POINTERS
 // Strong pointers will deallocate memory when they all disappear
@@ -24,6 +25,11 @@
 // OTHER NOTES
 // Mutable reference: guarantees that nothing else is trying to modify it
 // Mutable pointer: only carries semantics to call itself something, there are no implications or guarantees
+
+// SYNCHRONOUS
+// since rc is not thread-safe, there is ARC
+// ARC is basically the same thing as RC but it uses thread-safe operations for managing the reference count
+// it is both Send and Sync
 
 use crate::cell::Cell;
 use std::marker::PhantomData;
@@ -34,10 +40,12 @@ struct RcInner<T> {
     refcount: Cell<usize>,
 }
 pub struct Rc<T> {
+    // NonNull is !Send by default
     inner: NonNull<RcInner<T>>,
     // WHY PHANTOMDATA
     // Tells rust that when you drop an Rc, that an RcInner<T> might be dropped and that it needs to be checked.
     // without this the Rc would be broken
+    // this is only needed when T is not static, but we would like this to work with all types
     _marker: PhantomData<RcInner<T>>,
 }
 
@@ -94,13 +102,13 @@ impl<T> Drop for Rc<T> {
     }
 }
 
-#[cfg(test)]
-mod test {
-    use super::*;
-    #[test]
-    fn bad() {
-        let (y, x);
-        x = String::from("foo");
-        y = Rc::new(&x);
-    }
-}
+// #[cfg(test)]
+// mod test {
+//     use super::*;
+//     #[test]
+//     fn bad() {
+//         let (y, x);
+//         x = String::from("foo");
+//         y = Rc::new(&x);
+//     }
+// }

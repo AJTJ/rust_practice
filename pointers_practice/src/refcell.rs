@@ -1,6 +1,15 @@
 // Refcell let's you check at runtime whether anyone else is mutating.
 // i.e. safe, dynamically-checked borrowing
 
+// GENERAL NOTES
+// not useful for synchronous situations because
+// you could use an atomic counter? (vs a Cell counter)
+// if you borrow and get a "None", you would have to spin in a loop until you get a "Some"
+// RWLOCK is a way to deal with this.
+// it is a refCell, where the counter is using atomics
+// where the read/write returns the ref/refmut, but blocks the current thread until the borrow can succeed
+// Mutex is also blocking, but only implements borrow_mut, and also has the guard that inc/dec the counter of references
+
 use crate::cell::Cell;
 use std::cell::UnsafeCell;
 
